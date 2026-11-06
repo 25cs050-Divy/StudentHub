@@ -1,0 +1,15 @@
+STUDENTHUB STEP 5 - PHP AUTHENTICATION
+
+1. BACK UP your current C:\xampp\htdocs\StudentHub folder first.
+2. Extract this ZIP. Copy its files/folders into your existing StudentHub folder, allowing files to be replaced.
+3. Ensure database.php uses the same MySQL username/password as your XAMPP setup.
+4. Keep the studenthub database and its nine tables that you already imported. Do not import the SQL again unless needed.
+5. Open http://localhost/StudentHub/register.php and create a test student account. Use a unique student code, username and email. Choose a password of at least 8 characters.
+6. Open http://localhost/StudentHub/ and log in with the email/password you registered.
+7. Test dashboard access while logged in, then use Sign Out. After signing out, manually open http://localhost/StudentHub/dashboard.php; it should redirect to the login page.
+
+NOTES
+- HTML pages have been converted to PHP pages so server-side sessions can protect them. Internal navigation links were updated.
+- Authentication uses password_hash/password_verify, PDO prepared statements, session ID regeneration, HttpOnly/SameSite session cookies and CSRF tokens.
+- Existing dashboard data and non-authentication forms are still mostly demonstration content; database integration for attendance, results, assignments and profile comes in later steps.
+- Do not upload real student personal information or database credentials to a public GitHub repository.
